@@ -25,7 +25,7 @@ app.post('/', async (req, res) => {
   try {
     const prompt = req.body.prompt;
 
-    const response = await openai.complete({
+    const response = await openai.createCompletion({
       model: "gpt-3.5-turbo",
       prompt: `${prompt}`,
       temperature: 0, // Higher values means the model will take more risks.
