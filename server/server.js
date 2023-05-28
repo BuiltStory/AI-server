@@ -7,7 +7,7 @@ dotenv.config()
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
-  basePath: "https://api.openai.com/v1/brian",
+  basePath: "https://api.openai.com/v1/chat",
 });
 
 const openai = new OpenAIApi(configuration);
