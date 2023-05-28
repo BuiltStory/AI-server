@@ -35,7 +35,8 @@ app.post('/', async (req, res) => {
       presence_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
     });
 
-    //console.log(response.data);
+    const botResponse = response.data.choices[0].text;
+    console.log('Bot response:', botResponse);
 
     res.status(200).send({
       bot: response.data.choices[0].text
