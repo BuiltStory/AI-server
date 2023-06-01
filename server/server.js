@@ -39,7 +39,7 @@ app.post('/', async (req, res) => {
     //console.log(completeResponse);
 
     res.status(200).send({
-      bot: response.data.choices[0].message.content
+      assistant: response.data.choices[0].message.content
     });
 
   } catch (error) {
